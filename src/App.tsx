@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Modal } from "./lib/Modal/modal";
+import useModal from "./lib/Modal/useModal";
 
 function App() {
+  const { isShowing, toggle } = useModal();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={toggle}>Afficher la modale</button>
+
+      <Modal hide={toggle} isShowing={isShowing} label="sample">
+        It works
+      </Modal>
     </div>
   );
 }
