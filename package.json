@@ -1,6 +1,6 @@
 {
   "name": "d2e-components",
-  "version": "0.1.0",
+  "version": "0.2.5",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.ts,test.ts,__snapshots__",
+    "build": "rm -rf dist && NODE_ENV=production && npx tsc && cp -r package.json README.md src/lib/styles ./dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,21 +37,10 @@
     ]
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/yann-lcrx/d2e-components"
