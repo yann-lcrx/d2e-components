@@ -13,8 +13,7 @@ A down-to-earth React Typescript component library which focuses on delivering s
 A simple modal which handles keyboard controls by default (press Escape to close).
 
 ```tsx
-import Modal from "d2e-components/Modal/modal";
-import useModal from "d2e-components/Modal/useModal";
+import { useModal, Modal } from "d2e-components";
 
 function MyComponent() {
   const { isShowing, toggle } = useModal();

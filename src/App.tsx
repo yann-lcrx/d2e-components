@@ -1,13 +1,12 @@
 import React from "react";
-import { Modal } from "./lib/Modal/modal";
-import useModal from "./lib/Modal/useModal";
+import { Modal, useModal } from "./lib/";
 
 function App() {
   const { isShowing, toggle } = useModal();
 
   return (
     <div className="App">
-      <button onClick={toggle}>Afficher la modale</button>
+      <button onClick={toggle}>Display</button>
 
       <Modal hide={toggle} isShowing={isShowing} label="sample">
         It works
