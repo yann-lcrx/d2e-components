@@ -6,6 +6,10 @@ A down-to-earth React Typescript component library which focuses on delivering s
 
 `npm i d2e-components`
 
+## Deployment
+
+Run `npm run build`, move to the created `dist` folder, then run `npm publish`
+
 ## Available components
 
 ### Modal
