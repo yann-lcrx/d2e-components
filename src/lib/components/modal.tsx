@@ -36,14 +36,14 @@ export function Modal({
   );
 
   useEffect(() => {
-    if (isClosable) {
+    if (isClosable && isShowing) {
       document.addEventListener(KEY_EVENT_TYPE, handleEscKey, false);
 
       return () => {
         document.removeEventListener(KEY_EVENT_TYPE, handleEscKey, false);
       };
     }
-  }, [handleEscKey, isClosable]);
+  }, [handleEscKey, isShowing, isClosable]);
 
   return isShowing
     ? createPortal(
